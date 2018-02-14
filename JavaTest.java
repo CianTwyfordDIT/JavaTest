@@ -86,6 +86,10 @@ public class TuneBook {
                 + fileName + "'");
         }
 	}
+	
+	public Tune findTune(String title) {
+		
+	}
 }
 
  public static void main(String[] args)
