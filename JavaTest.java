@@ -1,5 +1,6 @@
 package ie.dit;
 import java.util.ArrayList;
+import java.io.*;
 
 public class Tune {
 	
@@ -54,4 +55,31 @@ public class TuneBook {
 			this.altTitle = altTitle;
 			this.notation = notation;
 	}
+	
+        String fileName = "hnj0.abc";
+        String line = null;
+
+        try {
+            FileReader fileReader = 
+                new FileReader(fileName);
+
+            BufferedReader bufferedReader = 
+                new BufferedReader(fileReader);
+
+            while((line = bufferedReader.readLine()) != null) {
+               
+            }   
+
+            bufferedReader.close();         
+        }
+        catch(FileNotFoundException ex) {
+            System.out.println(
+                "Unable to open file '" + 
+                fileName + "'");                
+        }
+        catch(IOException ex) {
+            System.out.println(
+                "Error reading file '" 
+                + fileName + "'");
+        }
 }
