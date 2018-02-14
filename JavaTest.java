@@ -3,6 +3,11 @@ import java.util.ArrayList;
 
 public class Tune {
 	
+	private static int x;
+	private static String title;
+	private static String altTitle;
+	private static String notation;
+	
 	public String toString() {
 		StringBuffer sb = new StringBuffer();
 		for (String word:words)
@@ -17,20 +22,11 @@ public class Tune {
 		
 		return sb.toString();
 	}
-	
-	private static int x() {
-		
-	}
-	
-	private static String title() {
-		
-	}
-	
-	private static String altTitle() {
-		
-	}
-	
-	private static String notation() {
-		
-	}
 }
+
+public class TuneBook {
+	
+	private ArrayList<String> Tune = new ArrayList<String>();
+	
+}
+	
