@@ -8,6 +8,24 @@ public class Tune {
 	private static String altTitle;
 	private static String notation;
 	
+	//Accessors
+	public int getx()
+	{
+		return x;
+	}
+	public String gettitle()
+	{
+		return title;
+	}
+	public String getaltTitle()
+	{
+		return altTitle;
+	}
+	public String getnotation()
+	{
+		return notation;
+	}
+	
 	public String toString() {
 		StringBuffer sb = new StringBuffer();
 		for (String word:words)
@@ -28,5 +46,12 @@ public class TuneBook {
 	
 	private ArrayList<String> Tune = new ArrayList<String>();
 	
+	//Constructor
+	public TuneBook(String fileName)
+	{
+			this.x = x;
+			this.title = title;
+			this.altTitle = altTitle;
+			this.notation = notation;
+	}
 }
-	
