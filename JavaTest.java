@@ -29,7 +29,7 @@ public class Tune {
 	
 	public String toString() {
 		StringBuffer sb = new StringBuffer();
-		for (String word:words)
+		for (String Tunes:tune)
 		{
 			if(altTitle != null) {
 				sb.append(x + ", " + title + ", " + altTitle);
@@ -46,6 +46,7 @@ public class Tune {
 public class TuneBook {
 	
 	private ArrayList<String> Tune = new ArrayList<String>();
+	String fileName = "hnj0.abc";
 	
 	//Constructor
 	public TuneBook(String fileName)
@@ -55,7 +56,6 @@ public class TuneBook {
 		this.altTitle = altTitle;
 		this.notation = notation;
 			
-		String fileName = "hnj0.abc";
         String line = null;
 
         try {
@@ -68,8 +68,8 @@ public class TuneBook {
             while((line = bufferedReader.readLine()) != null) {
                if (line.startsWith("T:"))
 			   {
-				   String s = line.subString(2);
-				   title = s;
+				   String tune = line.subString(2);
+				   Tunes.add(tune);
 			   }
             }   
 
