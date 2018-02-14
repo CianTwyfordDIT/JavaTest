@@ -50,13 +50,12 @@ public class TuneBook {
 	//Constructor
 	public TuneBook(String fileName)
 	{
-			this.x = x;
-			this.title = title;
-			this.altTitle = altTitle;
-			this.notation = notation;
-	}
-	
-        String fileName = "hnj0.abc";
+		this.x = x;
+		this.title = title;
+		this.altTitle = altTitle;
+		this.notation = notation;
+			
+		String fileName = "hnj0.abc";
         String line = null;
 
         try {
@@ -67,7 +66,11 @@ public class TuneBook {
                 new BufferedReader(fileReader);
 
             while((line = bufferedReader.readLine()) != null) {
-               
+               if (line.startsWith("T:"))
+			   {
+				   String s = line.subString(2);
+				   title = s;
+			   }
             }   
 
             bufferedReader.close();         
@@ -82,4 +85,5 @@ public class TuneBook {
                 "Error reading file '" 
                 + fileName + "'");
         }
+	}
 }
